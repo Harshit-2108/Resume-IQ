@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Resume IQ</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #2c3e50, #34495e);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .background {
+      position: absolute;
+      width: 430px;
+      height: 520px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+    .background .shape {
+      position: absolute;
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+      animation: moveShape 5s linear infinite;
+    }
+    .shape:first-child {
+      background: linear-gradient(#1845ad, #23a2f6);
+      left: -80px;
+      top: -80px;
+    }
+    .shape:last-child {
+      background: linear-gradient(to right, #ff512f, #f09819);
+      right: -30px;
+      bottom: -80px;
+      animation-delay: 2s;
+    }
+    @keyframes moveShape {
+      0% { transform: translate(0, 0); }
+      25% { transform: translate(80px, 80px); }
+      50% { transform: translate(160px, 0); }
+      75% { transform: translate(80px, -80px); }
+      100% { transform: translate(0, 0); }
+    }
+    .login-form {
+      position: relative;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      padding: 50px 35px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+      color: white;
+      width: 400px;
+    }
+    .login-form h3 {
+      font-size: 32px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    input {
+      width: 100%;
+      padding: 15px;
+      margin-top: 15px;
+      background-color: rgba(255, 255, 255, 0.07);
+      border-radius: 3px;
+      border: none;
+      font-size: 14px;
+      color: white;
+    }
+    button {
+      margin-top: 30px;
+      width: 100%;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: 600;
+      background-color: #ffffff;
+      color: #080710;
+      border-radius: 5px;
+      cursor: pointer;
+      border: none;
+    }
+    button:hover {
+      background-color: #3498db;
+    }
+    .login-form a {
+      display: block;
+      margin-top: 20px;
+      color: white;
+    }
+    .login-form a:hover {
+      color: #3498db;
+    }
+    .link {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+  </div>
+  <div class="login-form">
+    <h3>Login to Resume IQ</h3>
+    <form action="resume.html" method="get">
+      <input type="text" placeholder="Username" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <div class="link">
+      <p>Don't have an account? <a href="signup1.html">Sign Up</a></p>
+    </div>
+  </div>
+</body>
+</html>

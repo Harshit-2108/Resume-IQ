@@ -1,0 +1,156 @@
+<!-- File: jobs.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Listings | Resume IQ</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f7fa;
+      color: #333;
+    }
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    .search-bar {
+      padding: 20px;
+      text-align: center;
+    }
+    .search-bar input {
+      width: 60%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+    .job-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 0 20px 40px 20px;
+    }
+    .job-card {
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+      transition: 0.3s;
+    }
+    .job-card:hover {
+      transform: translateY(-5px);
+    }
+    .job-title {
+      font-size: 1.2em;
+      color: #3498db;
+      margin-bottom: 10px;
+    }
+    .company {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    .location {
+      color: #777;
+      margin-bottom: 10px;
+    }
+    .job-description {
+      font-size: 0.95em;
+      margin-bottom: 12px;
+    }
+    .apply-btn {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .apply-btn:hover {
+      background-color: #2980b9;
+    }
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Explore Job Opportunities</h1>
+  </header>
+
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search for job title (e.g., Frontend Developer)" onkeyup="filterJobs()">
+  </div>
+
+  <div class="job-container" id="jobsSection">
+    <!-- Job cards dynamically filtered -->
+    <div class="job-card">
+      <div class="job-title">Frontend Developer</div>
+      <div class="company">TechNova</div>
+      <div class="location">Remote</div>
+      <div class="job-description">React, Redux, TypeScript developer needed.</div>
+      <a href="apply.html" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="job-card">
+      <div class="job-title">Backend Developer</div>
+      <div class="company">CodeBase</div>
+      <div class="location">Bangalore</div>
+      <div class="job-description">Node.js and MongoDB experience required.</div>
+      <a href="apply.html" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="job-card">
+      <div class="job-title">UI/UX Designer</div>
+      <div class="company">DesignMatrix</div>
+      <div class="location">Chandigarh</div>
+      <div class="job-description">Wireframing and prototyping in Figma.</div>
+      <a href="apply.html" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="job-card">
+      <div class="job-title">Data Analyst</div>
+      <div class="company">InsightsPro</div>
+      <div class="location">Mumbai</div>
+      <div class="job-description">Work with SQL, Excel, and dashboards.</div>
+      <a href="apply.html" class="apply-btn">Apply Now</a>
+    </div>
+    <div class="job-card">
+      <div class="job-title">Angular Developer</div>
+      <div class="company">SoftEdge</div>
+      <div class="location">Pune</div>
+      <div class="job-description">Develop Angular apps with REST integration.</div>
+      <a href="apply.html" class="apply-btn">Apply Now</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Resume IQ. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function filterJobs() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const jobCards = document.querySelectorAll(".job-card");
+
+      jobCards.forEach(card => {
+        const title = card.querySelector(".job-title").textContent.toLowerCase();
+        card.style.display = title.includes(input) ? "block" : "none";
+      });
+    }
+    
+
+  </script>
+</body>
+</html>

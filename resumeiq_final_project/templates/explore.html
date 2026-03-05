@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explore | Resume IQ</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #f0f4f8, #f9f9f9);
+    }
+
+    header {
+      background: linear-gradient(to right, #2c3e50, #34495e);
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      color: #ddd;
+    }
+
+    section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    h2 {
+      color: #2c3e50;
+      font-size: 2.2em;
+      margin-bottom: 30px;
+      border-left: 6px solid #3498db;
+      padding-left: 12px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeIn 0.6s ease-in-out both;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h3 {
+      margin: 0 0 12px;
+      color: #3498db;
+      font-size: 1.4em;
+    }
+
+    .card-content p {
+      font-size: 0.95em;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 25px 0;
+      margin-top: 60px;
+      font-size: 0.95em;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2em;
+      }
+      h2 {
+        font-size: 1.6em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Explore Opportunities</h1>
+    <p>Discover job categories, companies, and tools to boost your career</p>
+  </header>
+
+  <section>
+    <h2>Job Categories</h2>
+    <div class="grid">
+      <!-- Frontend -->
+      <div class="card">
+        <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*V-Jp13LvtVc2IiY2fp4qYw.jpeg" alt="Frontend Developer">
+        <div class="card-content">
+          <h3>Frontend Development</h3>
+          <p>Craft beautiful UIs with HTML, CSS, JavaScript, and React.</p>
+        </div>
+      </div>
+      <!-- Backend -->
+      <div class="card">
+        <img src="https://acropolium.com/img/articles/most-popular-backend-frameworks/img01.jpg" alt="Backend Developer">
+        <div class="card-content">
+          <h3>Backend Development</h3>
+          <p>Design server-side logic with Node.js, Python, and databases.</p>
+        </div>
+      </div>
+      <!-- Data Analyst -->
+      <div class="card">
+        <img src="https://d2nzy1qhita6w.cloudfront.net/media/magefan_blog/data-analysis-skills-duties-responsibilities.jpeg" alt="Data Analyst">
+        <div class="card-content">
+          <h3>Data Analysis</h3>
+          <p>Analyze data using SQL, Python, Power BI and Excel.</p>
+        </div>
+      </div>
+      <!-- UI/UX -->
+      <div class="card">
+        <img src="https://careercollegeindia.com/blog/wp-content/uploads/2024/09/UI-UX-Designer-scaled.jpg" alt="UI/UX Design">
+        <div class="card-content">
+          <h3>UI/UX Design</h3>
+          <p>Create intuitive user experiences with Figma & Adobe XD.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Top Companies</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://i.cbc.ca/1.6717768.1674054979!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_1180/microsoft-earns.jpg?im=Resize%3D780" alt="Microsoft">
+        <div class="card-content">
+          <h3>Microsoft</h3>
+          <p>Work in cloud, AI, software, and enterprise ecosystems.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://www.investopedia.com/thmb/zSP1TkVLKaAtO915BfHhLYLsxMQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1445281649-9065b16ef7984345baf79affbde0e0ee.jpg" alt="Apple">
+        <div class="card-content">
+          <h3>Apple</h3>
+          <p>Redefine user-centric tech with innovation & design.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ08UbtDo957403sfL2kaBt55vtxGqI3kDNYQ&s" alt="Google">
+        <div class="card-content">
+          <h3>Google</h3>
+          <p>Explore AI, Cloud, Chrome, Android, and search at scale.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://currentaffairs.adda247.com/wp-content/uploads/multisite/sites/5/2022/11/16140212/L2aCmYvS-amazon1-1200x675-1.jpg" alt="Amazon">
+        <div class="card-content">
+          <h3>Amazon</h3>
+          <p>Innovate in e-commerce, AWS, logistics, and delivery.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Career Tools</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://play-lh.googleusercontent.com/JbYSifXLD71pQ8NB7tyaSsReFwfU3mVsqDBdpf__-B10RWdCHB_X2U5nfL4_7j9M0WE" alt="Resume Builder">
+        <div class="card-content">
+          <h3>Resume Builder</h3>
+          <p>Build eye-catching, ATS-optimized resumes in minutes.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://blogimage.vantagecircle.com/content/images/2019/04/interview-questions.png" alt="Interview Prep">
+        <div class="card-content">
+          <h3>Interview Preparation</h3>
+          <p>Get confident with mock questions, tips, and formats.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWpIZSO4bDRZ7_rxsTYdg4zYo9aJQTCLQg7A&s" alt="Skill Assessment">
+        <div class="card-content">
+          <h3>Skill Assessments</h3>
+          <p>Evaluate your skill level and track your growth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Resume IQ. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
